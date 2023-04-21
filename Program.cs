@@ -35,18 +35,39 @@
 // 82 -> 10
 // 9012 -> 12
 
-Console.WriteLine("Введите число");
-int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число");
+// int number = Convert.ToInt32(Console.ReadLine());
 
-int sum = 0;
+// int sum = 0;
 
-int NumberSum()
+// int NumberSum()
+// {
+//     while (number != 0)
+//     {
+//         sum += number % 10;
+//         number /= 10;
+//     }
+//     return sum;
+// }
+// Console.WriteLine("Сумма цифр числа равна: "+NumberSum());
+
+
+
+
+
+// Напишите программу, которая задаёт массив 
+// из 8 элементов и выводит их на экран.
+
+int[] arr = new int[8];
+
+int[] FillArray()
 {
-    while (number != 0)
+    for (int i = 0; i < arr.Length; i++)
     {
-        sum += number % 10;
-        number /= 10;
+        Console.Write($"Введите элемент массива под индексом {i}: ");
+        arr[i] = int.Parse(Console.ReadLine());
     }
-    return sum;
+    return arr;
 }
-Console.WriteLine("Сумма цифр числа равна: "+NumberSum());
+
+Console.WriteLine(string.Join(", ", FillArray()));
