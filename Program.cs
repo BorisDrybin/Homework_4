@@ -14,9 +14,12 @@ int B = Convert.ToInt32(Console.ReadLine());
 
 int prod = 1;
 
-for (int i = 0; i < B; i++)
+int MathPow()
 {
-    prod = prod * A;
+    for (int i = 0; i < B; i++)
+    {
+            prod = prod * A;
+    }
+    return prod;
 }
-
-Console.WriteLine("Число в степени равно: "+prod);
+Console.WriteLine("Число в степени равно: "+MathPow());
